@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate.format_sql: true
+    hibernate:
+      ddl_auto: update
+    show_sql: true
+
+api:
+  security:
+    token:
+      secret: ${JWT_TOKEN}
